@@ -2,6 +2,7 @@ import urllib.request
 import urllib.parse 
 import json
 import pandas as pd
+import re
 from typing import List
 
 
@@ -57,18 +58,29 @@ from typing import List
 
 
 
-def update_url(base_url: str,
-               id_to_add: List[str],
-               split_char: str,
-               id_to_replace_index: int):
+def update_url(url: str, 
+               id: str, 
+               search_pattern: str,
+               sub_pattern: str) -> str:
+    """Updates id in an url 
+    
+    Args: 
+       url (str): An url to be updated
+       id (str): An id to insert
+       search_pattern (str): A pattern to find an id in an url
+       sub_pattern (str): A pattern to remove charecters other than id
 
-    splitted_url = base_url.split(split_char) 
-    url_part1_size = len(splitted_url[0])
-    id_removed = splitted_url[0][:url_part1_size - id_to_replace_index]
+    Returns:
+       str: An url with a new id 
+    """
 
-    new_url = id_removed + id_to_add + '?' + splitted_url[1]
+    id_to_remove = re.findall(search_pattern, url)
+    id_to_remove = [re.sub(sub_pattern, '', id) for id in id_to_remove]
+    id_to_remove = ' '.join([str(elem) for elem in id_to_remove])
+    new_url = re.sub(id_to_remove,id, url)
 
     return new_url
+
 
 
 
@@ -159,31 +171,3 @@ def json_to_df(data: List[dict]) -> pd.DataFrame:
     
     
     return df
-
-
-
-
-
-url_base = 'https://store.steampowered.com/appreviews/374320?json=1&filter=recent&num_per_page=100&cursor='
-ids = ['374320','275850', '377160', '218620', '221100', '319630', '227300', '346110', '264710', '242760', '107410', '578080', '435150', '814380', '431960', '322330', '239140', '250900', '289070', '261550', '252490', '413150', '271590', '582010', '620', '550']
-
-#'1174180'- json decoder error (Red Dead Redumption)
-
-data = []
-for id in ids:
-    print(id)
-    if id not in url_base:
-        url_base = update_url(base_url = url_base,
-                              id_to_add = id,
-                              split_char = '?',
-                              id_to_replace_index = len(id))
-                  
-    data.append(collect_reviews(url_base = url_base, 
-                                num_pages = 2,
-                                review_key = 'reviews',
-                                cursor_key = 'cursor'))
-
-flat_list = [item for sublist in data for item in sublist]
-
-df = json_to_df(flat_list)
-df = df.drop_duplicates(subset=['steamid'], keep = 'first')
