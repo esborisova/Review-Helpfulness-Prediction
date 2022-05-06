@@ -1,4 +1,4 @@
-"""Scripts for collecting reviews from Steam via API."""
+"""Functions for collecting reviews from Steam via API."""
 
 import urllib.request
 import urllib.parse
@@ -14,11 +14,8 @@ def update_url(url: str, id: str, search_pattern: str, sub_pattern: str) -> str:
 
     Args:
        url (str): An url to be updated.
-
        id (str): An id to insert.
-
        search_pattern (str): A pattern to find an id in an url.
-
        sub_pattern (str): A pattern to remove charecters other than id.
 
     Returns:
@@ -41,11 +38,8 @@ def collect_reviews(
 
     Args:
         url_base (str): A string containg url with a game id.
-
         num_pages (int): The number of pages to loop over and save reviews.
-
         review_key (str): A key for reviews.
-
         cursor_key (str): A key for a cursor.
 
     Returns:

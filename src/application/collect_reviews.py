@@ -61,3 +61,5 @@ flat_list = [item for sublist in data for item in sublist]
 
 df = json_to_df(flat_list)
 df = df.drop_duplicates(subset=["steamid"], keep="first")
+
+df.to_pickle('../../data/dataset.pkl')
