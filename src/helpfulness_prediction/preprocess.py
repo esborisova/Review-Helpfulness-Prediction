@@ -10,7 +10,7 @@ nlp = spacy.load("en_core_web_lg")
 
 def clean(text: str) -> str:
     """
-    Cleans text from punctuation, URLs, special characters and lowercases.
+    Cleans text from punctuation, double spaces, URLs, special characters and lowercases.
 
     Args:
         text (str): A string to clean.
@@ -29,44 +29,6 @@ def clean(text: str) -> str:
     cleaned_text = cleaned_text.strip()
 
     return cleaned_text
-
-
-def collect_tokens(text: str) -> str:
-    """
-    Tokenizes text using spaCy pipeline.
-
-    Args:
-        text (str): A string with text to be tokenized.
-
-    Returns:
-        str: A tokenized string.
-    """
-
-    tokens = []
-    doc = nlp(text)
-    for token in doc:
-        tokens.append(token.text)
-
-    return tokens
-
-
-def collect_lemmas(text: str) -> str:
-    """
-    Lemmatizes text using spaCy pipeline.
-
-    Args:
-        text (str): A string to be lemmatized.
-
-    Returns:
-        str: A lemmatized string.
-    """
-
-    lemmas = []
-    doc = nlp(text)
-    for token in doc:
-        lemmas.append(token.lemma_)
-
-    return lemmas
 
 
 def rm_stops(text: List[str], stopwords: List[str]) -> List[str]:
@@ -105,3 +67,41 @@ def rm_single_char(text: List[str]) -> List[str]:
         if len(token) >= 2:
             tokens.append(token)
     return tokens
+
+
+def collect_tokens(text: str) -> List[str]:
+    """
+    Tokenizes text using spaCy pipeline.
+
+    Args:
+        text (str): A string with text to be tokenized.
+
+    Returns:
+        List[str]: A list with tokens.
+    """
+
+    tokens = []
+    doc = nlp(text)
+    for token in doc:
+        tokens.append(token.text)
+
+    return tokens
+
+
+def collect_lemmas(text: str) -> List[str]:
+    """
+    Lemmatizes text using spaCy pipeline.
+
+    Args:
+        text (str): A string to be lemmatized.
+
+    Returns:
+        List[str]: A list with lemmas.
+    """
+
+    lemmas = []
+    doc = nlp(text)
+    for token in doc:
+        lemmas.append(token.lemma_)
+
+    return lemmas
