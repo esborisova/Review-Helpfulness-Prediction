@@ -31,6 +31,26 @@ def clean(text: str) -> str:
     return cleaned_text
 
 
+def rm_html_special_char(text: str) -> str:
+    """
+    Cleans text from URLs and special characters.
+
+    Args:
+        text (str): A string to clean.
+
+    Returns:
+        str: A cleaned string.
+    """
+
+    no_urls = re.sub(r"http\S+", "", text)
+    no_special_ch = re.sub(
+        r"(#[A-Za-z]+)|(@[A-Za-z]+)|([^A-Za-z \t])|(\w+:\/\/\S+)", " ", no_urls
+    )
+    no_special_ch = no_special_ch.replace("\n", " ")
+
+    return no_special_ch
+
+
 def rm_stops(text: List[str], stopwords: List[str]) -> List[str]:
     """
     Removes stopwords from tokenized/lemmatized text.
