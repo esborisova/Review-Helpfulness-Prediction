@@ -1,3 +1,5 @@
+"""Script for plotting sigmoid function."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math

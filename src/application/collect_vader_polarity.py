@@ -1,3 +1,5 @@
+"""Pipeline for preparing reviews for vader sentiment analysis and for collecting polarity scores."""
+
 import sys
 
 sys.path.append("../helpfulness_prediction")

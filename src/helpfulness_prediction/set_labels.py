@@ -1,3 +1,5 @@
+"""Function for transforming Y values into 0 or 1 based on a defined threshold."""
+
 import pandas as pd
 from typing import Tuple
 

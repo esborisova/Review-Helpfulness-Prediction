@@ -1,3 +1,5 @@
+"""Pipeline for labeling Y values with 0 and 1 for binary classification."""
+
 import sys
 
 sys.path.append("../helpfulness_prediction")

@@ -1,3 +1,5 @@
+"""Script for plotting reviews distribution across Y values."""
+
 import sys
 
 import pandas as pd
