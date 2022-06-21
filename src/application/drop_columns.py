@@ -2,24 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_pickle("../../data/data_with_features.pkl")
-
-features = df.drop(
-    [
-        "steamid",
-        "timestamp_created",
-        "review",
-        "votes_funny",
-        "comment_count",
-        "cleaned",
-        "tokenized",
-        "lemmatized",
-        "vu_label",
-        "wvs_label",
-        "partially_cleaned",
-    ],
-    axis=1,
-)
+df = pd.read_pickle("../../data/data_with_features.pkl"))
 
 features_labels = df.drop(
     [
@@ -36,5 +19,4 @@ features_labels = df.drop(
     axis=1,
 )
 
-features.to_pickle("../../data/df_features.pkl")
 features_labels.to_pickle("../../data/df_features_labels.pkl")
