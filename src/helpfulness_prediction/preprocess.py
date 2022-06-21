@@ -31,9 +31,9 @@ def clean(text: str) -> str:
     return cleaned_text
 
 
-def rm_html_special_char(text: str) -> str:
+def rm_html(text: str) -> str:
     """
-    Cleans text from URLs and special characters.
+    Cleans text from URLs.
 
     Args:
         text (str): A string to clean.
@@ -43,10 +43,7 @@ def rm_html_special_char(text: str) -> str:
     """
 
     no_urls = re.sub(r"http\S+", "", text)
-    no_special_ch = re.sub(
-        r"(#[A-Za-z]+)|(@[A-Za-z]+)|([^A-Za-z \t])|(\w+:\/\/\S+)", " ", no_urls
-    )
-    no_special_ch = no_special_ch.replace("\n", " ")
+    no_special_ch =  " ".join(no_urls.split())
 
     return no_special_ch
 

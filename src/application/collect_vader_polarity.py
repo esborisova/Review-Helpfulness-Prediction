@@ -5,11 +5,11 @@ import sys
 sys.path.append("../helpfulness_prediction")
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from preprocess import rm_html_special_char
+from preprocess import rm_html
 
 df = pd.read_pickle("../../data/with_labels.pkl")
 
-df["partially_cleaned"] = df["review"].apply(rm_html_special_char)
+df["partially_cleaned"] = df["review"].apply(rm_html)
 
 df["vader_pos"] = 0
 df["vader_neg"] = 0
