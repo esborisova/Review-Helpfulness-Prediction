@@ -43,7 +43,7 @@ def rm_html(text: str) -> str:
     """
 
     no_urls = re.sub(r"http\S+", "", text)
-    no_special_ch =  " ".join(no_urls.split())
+    no_special_ch = " ".join(no_urls.split())
 
     return no_special_ch
 

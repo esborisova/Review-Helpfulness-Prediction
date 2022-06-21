@@ -7,7 +7,8 @@ from typing import Tuple
 def assign_class_label(
     df: pd.DataFrame, y_column: str, label_column: str, threshold: Tuple[int, float]
 ) -> pd.DataFrame:
-    """Returns 0 or 1 based on the threshold.
+    """
+    Returns 0 or 1 based on the threshold.
 
     Args:
         df (pd.DataFrame): A pandas dataframe with data.
