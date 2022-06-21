@@ -1,3 +1,5 @@
+"""Functions for counting the number of sentences and paragraphs in a string"""
+
 import nltk
 from nltk.tokenize import sent_tokenize
 
