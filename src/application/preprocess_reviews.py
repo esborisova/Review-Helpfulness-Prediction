@@ -29,11 +29,11 @@ df = df.loc[df["cleaned"] != ""]
 
 cleaned_rev = df["cleaned"].tolist()
 
-tokenized_reviews = [collect_tokens(review) for review in cleaned_rev]
+tokenized_reviews = [collect_tokens(review, nlp=nlp) for review in cleaned_rev]
 no_stops_tokens = [rm_stops(review, stops) for review in tokenized_reviews]
 no_stops_tokens = [rm_single_char(review) for review in no_stops_tokens]
 
-lemmatized_reviews = [collect_lemmas(review) for review in cleaned_rev]
+lemmatized_reviews = [collect_lemmas(review, nlp=nlp) for review in cleaned_rev]
 no_stops_lemmas = [rm_stops(review, stops) for review in lemmatized_reviews]
 no_stops_lemmas = [rm_single_char(review) for review in no_stops_lemmas]
 

@@ -11,14 +11,14 @@ df["month"] = 0
 df["day"] = 0
 
 for row in range(len(df)):
-    df["year"].iloc[row] = datetime.utcfromtimestamp(
+    df["year"].iloc[row] = int(datetime.utcfromtimestamp(
         df["timestamp_created"].iloc[row]
-    ).strftime("%Y")
-    df["month"].iloc[row] = datetime.utcfromtimestamp(
+    ).strftime("%Y"))
+    df["month"].iloc[row] = int(datetime.utcfromtimestamp(
         df["timestamp_created"].iloc[row]
-    ).strftime("%m")
-    df["day"].iloc[row] = datetime.utcfromtimestamp(
+    ).strftime("%m"))
+    df["day"].iloc[row] = int(datetime.utcfromtimestamp(
         df["timestamp_created"].iloc[row]
-    ).strftime("%d")
+    ).strftime("%d"))
 
 df.to_pickle("../../data/data_with_features.pkl")

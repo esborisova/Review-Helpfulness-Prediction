@@ -1,11 +1,7 @@
 "Fucntions for cleaning, tokenizing and lemmatizing reviews"
 
-import pandas as pd
 import re
-import spacy
 from typing import List
-
-nlp = spacy.load("en_core_web_lg")
 
 
 def clean(text: str) -> str:
@@ -86,12 +82,13 @@ def rm_single_char(text: List[str]) -> List[str]:
     return tokens
 
 
-def collect_tokens(text: str) -> List[str]:
+def collect_tokens(text: str, nlp) -> List[str]:
     """
     Tokenizes text using spaCy pipeline.
 
     Args:
         text (str): A string with text to be tokenized.
+        nlp: A spaCy pipeline.
 
     Returns:
         List[str]: A list with tokens.
@@ -105,12 +102,13 @@ def collect_tokens(text: str) -> List[str]:
     return tokens
 
 
-def collect_lemmas(text: str) -> List[str]:
+def collect_lemmas(text: str, nlp) -> List[str]:
     """
     Lemmatizes text using spaCy pipeline.
 
     Args:
         text (str): A string to be lemmatized.
+        nlp: A spaCy pipeline.
 
     Returns:
         List[str]: A list with lemmas.
@@ -121,4 +119,8 @@ def collect_lemmas(text: str) -> List[str]:
     for token in doc:
         lemmas.append(token.lemma_)
 
-    return lemmas
+    return lemmas,
+
+
+def identity_tokenizer(text):
+    return text
