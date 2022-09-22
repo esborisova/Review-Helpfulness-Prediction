@@ -5,7 +5,7 @@ The aim of this MA project was to develop a machine learning model able to predi
 To that end, various classification as well as regression algorithms and two different helpfulness scores were tested. The impact of linguistic characteristics of a review content (lexical
 units, length, polarity, etc.) and metadata information available on Steam (e.g., number of games a reviewer owns) on the helpfulness prediction was examined. Overall, classification models based on votes up and hybrid sets of review- as well as reviewer-related features were found to be the most efficient. In particular, combining metadata with lexical units or with values reflecting readability, length, polarity, the number of comparative expressions a review contains allowed to achieve the highest predictive accuracy of about 74% for the helpful category. Furthermore, the findings reveal that lexical units, readability, length and a year (when a review was posted on Steam) are the most influential determinants of helpfulness. Finally, the empirical results provide evidence that the use of metadata information is crucial for boosting the model performance, especially with respect to the prediction of helpful reviews.
 
-The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4VuxHNv67WbLjj-VQnbyh/view?usp=sharing)
+The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4VuxHNv67WbLjj-VQnbyh/view?usp=sharing).
 
 # Dataset
 37788 user reviews collected from Steam through API. For the review collection, 27 different games were chosen. The games is listed in the table below.
@@ -14,7 +14,7 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 
 <details>
   <summary> List of games </summary>
-|**Game**                       |      **Release data**                                                                                                                                                                                       |
+|**Game**                       |      **Release data**    |                                                                                                                                                                                   |
 | ----------------------------  | ------------------------ |
 |No Man’s Sky                   | 12.08.2016               |
 |Dark Souls III                 | 11.04.2016               |
