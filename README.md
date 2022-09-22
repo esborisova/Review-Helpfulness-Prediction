@@ -8,7 +8,7 @@ units, length, polarity, etc.) and metadata information available on Steam (e.g.
 The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4VuxHNv67WbLjj-VQnbyh/view?usp=sharing).
 
 # Dataset
-37788 user reviews collected from Steam through API. For the review collection, 27 different games were chosen. The games is listed in the table below.
+37788 user reviews collected from Steam through API. For the review collection, 27 different games were chosen. The games are listed in the table below.
 <br /> 
 
 <details>
@@ -53,12 +53,12 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 |**Feature variable**          |      **Description**                                                                                                                                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |Lexical units	               |   TF-IDF weighted *n*-grams and word2vec embeddings. For the letter, both embeddings obtained from the basiline (trained on Steam corpus) model and from the pre-trained Google’s word2vec were utilized.  |
-|Length                        |  <ul><li> Total number of characters, words, sentences, paragraphs;</li><li>the average sentence length (number of words divided by the number of sentences).</li></ul>                                    |                                                       
+|Length                        |  <ul><li> Total number of characters, words, sentences, paragraphs;</li><li>Average sentence length (number of words divided by the number of sentences).</li></ul>                                    |                                                       
 |Readability            	   |  <ul><li>Flesch Reading Ease;</li><li>Automated Readability Index;</li><li>Gunning Fog Index</li></ul>.                                                                                                    |
 |Polarity    	               |  <ul><li>Positive, neutral and negative polarity scores produced by VADER;</li><li>User recommendation: Recommend (positive)/Not recommend (negative).</li></ul>                                           |
 |Grammatical Categories	       |   Percentage of nouns, verbs and adjectives per review.                                                                                                                                                    |
 |Comparative Expressions       |   Number of comparative and superlative adjectives/adverbs per review.                                                                                                                                     |
-|Date           	           |   Day, month and year when an review was posted on Steam.                                                                                                                                                  |
+|Date           	           |   Day, month and year when a review was posted on Steam.                                                                                                                                                  |
 |Playtime                      |   Total time a reviewer played a game.                                                                                                                                                                     |
 |Number of games owned         |   Total number of games owned by a reviewer.                                                                                                                                                               |
 |Number of reviews	           |   Total number of reviews written by a reviewer.                                                                                                                                                           |
@@ -66,6 +66,6 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 
 |**Response variables**        |      **Description**                                                                                                                                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|Weighted vote score	       |  An helpfulness average value that tales into account fake helpfulness votes. Steam developers do not provide information with respect to the score is computed.|
-|Votes Up                      |  Number of users rated a review as helpful.                                                                                                                     |                                                                                       
+|Weighted vote score	       |  An average helpfulness value that takes into account fake helpfulness votes. Steam developers do not provide information with respect to how thise score is computed.|
+|Votes Up                      |  Number of users rated a review as helpful.                                                                                                                           |                                                                                       
 
