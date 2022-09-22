@@ -14,6 +14,7 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 
 <details>
   <summary> List of games </summary>
+  
 |**Game**                       |      **Release data**    |                                                                                                                                                                                   |
 | ----------------------------  | ------------------------ |
 |No Man’s Sky                   | 12.08.2016               |
@@ -43,6 +44,7 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 |Stardew Valley                 | 26.02.2016               |
 |Grand Theft Auto V             | 14.03.2015               |
 |Monster Hunter: Worldvote score| 09.08.2018               |                                                                                                                                                                                
+
 
 </details>
 
