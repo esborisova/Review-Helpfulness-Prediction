@@ -119,7 +119,7 @@ def collect_lemmas(text: str, nlp) -> List[str]:
     for token in doc:
         lemmas.append(token.lemma_)
 
-    return lemmas,
+    return lemmas
 
 
 def identity_tokenizer(text):

@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_pickle("../../data/data_with_features.pkl"))
+df = pd.read_pickle("../../data/data_with_features.pkl")
 
 features_labels = df.drop(
     [

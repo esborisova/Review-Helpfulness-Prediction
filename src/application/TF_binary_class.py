@@ -106,3 +106,43 @@ y_pred_rf = RF.predict(X_scalled_test)
 
 RF_report = classification_report(y_test, y_pred_rf)
 print(RF_report)
+
+
+df = pd.DataFrame(columns = ["feature", "score"])
+
+feature_names = ["num_games_owned", 
+                 "num_reviews", 
+                 "playtime_forever",  
+                 "FRE", 	
+                 "ARI",  
+                 "GFI", 	
+                 "N_words", 
+                 "N_char", 
+                 "N_sent",	
+                 "N_par", 
+                 "averg_sent_len", 
+                 "NN", 
+                 "VB", 
+                 "JJ", 
+                 "comp_exp",
+                 "year",
+                 "month",
+                 "day",
+                 "voted_up_pos",
+                 "voted_up_neg",
+                 "vader_pos", 
+                 "vader_neg", 
+                 "vader_neu"]
+
+df["feature"] = feature_names
+
+importance_lr = LR.coef_[0]
+#importance_rf = RF.feature_importances_
+
+scores = []
+for i, v in enumerate(importance_lr):
+   scores.append(v)
+
+df["score"] = scores
+
+

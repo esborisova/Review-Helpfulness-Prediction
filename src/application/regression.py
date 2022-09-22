@@ -8,7 +8,7 @@ import numpy as np
 from sklearn import metrics
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from scipy.sparse import hstack
@@ -109,10 +109,10 @@ rf_regressor = {
     "R2_train": r2_train_rf,
 }
 
-LR = LinearRegression()
-LR.fit(X_scalled_train, y_train)
-y_pred_lr = LR.predict(X_scalled_test)
-y_pred_train_lr = LR.predict(X_scalled_train)
+RR = Ridge()
+RR.fit(X_scalled_train, y_train)
+y_pred_lr = RR.predict(X_scalled_test)
+y_pred_train_lr = RR.predict(X_scalled_train)
 
 mae_lr = metrics.mean_absolute_error(y_test, y_pred_lr)
 mse_lr = metrics.mean_squared_error(y_test, y_pred_lr)
