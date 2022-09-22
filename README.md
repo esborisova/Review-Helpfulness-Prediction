@@ -48,9 +48,9 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 
 <br />
 
-# Features and response variables
+# Feature and response variables
 
-|**Feature variable**          |      **Description**                                                                                                                                                                                       |
+|**Feature**          |      **Description**                                                                                                                                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |Lexical units	               |   TF-IDF weighted *n*-grams and word2vec embeddings. For the letter, both embeddings obtained from the basiline (trained on Steam corpus) model and from the pre-trained Google’s word2vec were utilized.  |
 |Length                        |  <ul><li> Total number of characters, words, sentences, paragraphs;</li><li>Average sentence length (number of words divided by the number of sentences).</li></ul>                                    |                                                       
@@ -64,7 +64,7 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 |Number of reviews	           |   Total number of reviews written by a reviewer.                                                                                                                                                           |
 
 
-|**Response variables**        |      **Description**                                                                                                                                                                                       |
+|**Lable**        |      **Description**                                                                                                                                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |Weighted vote score	       |  An average helpfulness value that takes into account fake helpfulness votes. Steam developers do not provide information with respect to how thise score is computed.|
 |Votes Up                      |  Number of users rated a review as helpful.                                                                                                                           |                                                                                       
