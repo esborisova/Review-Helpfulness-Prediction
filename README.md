@@ -10,13 +10,9 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 # Dataset
 37788 user reviews collected from Steam through API. For the review collection, 27 different games were chosen. The games is listed in the table below.
 
-<br /> 
 
-<details>
-  <summary> List of games </summary>
-  
 |**Game**                       |      **Release data**    |                                                                                                                                                                                   |
-| ----------------------------  | ------------------------ |
+| ----------------------------- | ------------------------ |
 |No Man’s Sky                   | 12.08.2016               |
 |Dark Souls III                 | 11.04.2016               |
 |Fallout 4                      | 12.11.2015               |
@@ -45,10 +41,6 @@ The MA thesis is available [here](https://drive.google.com/file/d/1Hqo493xVEOy4V
 |Grand Theft Auto V             | 14.03.2015               |
 |Monster Hunter: Worldvote score| 09.08.2018               |                                                                                                                                                                                
 
-
-</details>
-
-<br /> 
 
 
 
